@@ -3,6 +3,7 @@ import DisclaimerModal from "@/components/DisclaimerModal";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import PracticeAreas from "@/components/PracticeAreas";
+import CoreValues from "@/components/CoreValues";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
@@ -16,6 +17,7 @@ const Index = () => {
         <HeroSection />
         <AboutSection />
         <PracticeAreas />
+        <CoreValues />
         <ContactSection />
       </main>
       <Footer />
