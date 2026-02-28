@@ -20,7 +20,7 @@ const values = [
 ];
 
 const CoreValues = () => (
-  <section id="values" className="py-24 bg-cream-warm">
+  <section id="values" className="py-24 bg-secondary">
     <div className="max-w-7xl mx-auto px-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -28,10 +28,11 @@ const CoreValues = () => (
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <div className="w-16 h-1 bg-primary mx-auto mb-8" />
+        <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mb-4">
           Why Clients Trust Me
         </h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-muted-foreground max-w-2xl mx-auto text-sm">
           In the legal profession, trust is everything. My practice is built on a
           foundation of transparency, dedication, and genuine care for my clients'
           well-being.
@@ -46,10 +47,10 @@ const CoreValues = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.15, duration: 0.6 }}
-            className="bg-card rounded-lg p-8 border border-border text-center"
+            className="bg-card p-8 border border-border text-center hover:border-primary transition-colors duration-300"
           >
-            <div className="w-14 h-14 rounded-full bg-muted flex items-center justify-center mx-auto mb-5">
-              <v.icon className="w-6 h-6 text-gold" strokeWidth={1.5} />
+            <div className="w-14 h-14 border border-border flex items-center justify-center mx-auto mb-5">
+              <v.icon className="w-6 h-6 text-primary" strokeWidth={1.5} />
             </div>
             <h3 className="font-heading text-lg font-semibold text-foreground mb-3">
               {v.title}
@@ -66,11 +67,12 @@ const CoreValues = () => (
         viewport={{ once: true }}
         className="mt-16 max-w-3xl mx-auto text-center"
       >
-        <p className="font-heading text-xl md:text-2xl italic text-foreground leading-relaxed">
+        <div className="w-8 h-1 bg-primary mx-auto mb-6" />
+        <p className="font-heading text-xl md:text-2xl text-foreground leading-relaxed normal-case tracking-normal">
           "Every case deserves dedicated attention, and every client deserves to
           understand their rights."
         </p>
-        <cite className="block mt-4 text-gold text-sm font-medium not-italic">
+        <cite className="block mt-4 text-primary text-sm font-medium not-italic tracking-[0.1em] uppercase">
           — Advocate Sujamya Yadav
         </cite>
       </motion.blockquote>
