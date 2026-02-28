@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin, Briefcase, Clock } from "lucide-react";
-import profileImg from "@/assets/sujamya-profile.jpg";
+import { User } from "lucide-react";
 
 const HeroSection = () => {
   const scrollTo = (id: string) =>
@@ -108,12 +108,8 @@ const HeroSection = () => {
           className="flex-shrink-0"
         >
           <div className="bg-card/80 backdrop-blur border border-border p-8 flex flex-col items-center w-72">
-            <div className="w-44 h-44 rounded-full overflow-hidden border-4 border-primary mb-6 shadow-[0_0_30px_hsla(24,100%,50%,0.25)]">
-              <img
-                src={profileImg}
-                alt="Advocate Sujamya Yadav"
-                className="w-full h-full object-cover"
-              />
+            <div className="w-44 h-44 rounded-full overflow-hidden border-4 border-primary mb-6 shadow-[0_0_30px_hsla(24,100%,50%,0.25)] bg-muted flex items-center justify-center">
+              <User className="w-16 h-16 text-muted-foreground" strokeWidth={1} />
             </div>
             <h3 className="font-heading text-xl font-bold text-foreground text-center">
               Sujamya Yadav
