@@ -20,7 +20,7 @@ const pillars = [
 ];
 
 const AboutSection = () => (
-  <section id="about" className="py-24 bg-cream-warm">
+  <section id="about" className="py-24 bg-secondary">
     <div className="max-w-7xl mx-auto px-6">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -29,11 +29,12 @@ const AboutSection = () => (
         transition={{ duration: 0.7 }}
         className="max-w-3xl mx-auto text-center mb-16"
       >
-        <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-2">
+        <div className="w-16 h-1 bg-primary mx-auto mb-8" />
+        <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mb-3">
           About Advocate Sujamya Yadav
         </h2>
-        <p className="text-muted-foreground text-sm">
-          Counsel at District &amp; Sessions Court | Civil Court, Kaiserbagh, Lucknow
+        <p className="text-muted-foreground text-sm tracking-wide uppercase">
+          Counsel at District & Sessions Court | Civil Court, Kaiserbagh, Lucknow
         </p>
       </motion.div>
 
@@ -45,7 +46,7 @@ const AboutSection = () => (
         className="max-w-4xl mx-auto space-y-6 text-muted-foreground leading-relaxed text-base md:text-lg"
       >
         <h3 className="font-heading text-2xl md:text-3xl font-semibold text-foreground">
-          Navigating the Legal System with Clarity &amp; Integrity
+          Navigating the Legal System with Clarity & Integrity
         </h3>
         <p>
           Navigating the legal system can be overwhelming. Whether you are dealing with a
@@ -55,8 +56,8 @@ const AboutSection = () => (
           and transparent.
         </p>
         <p>
-          Based in Lucknow, I am a practicing Advocate at the District &amp; Sessions Court
-          (Civil Court, Kaiserbagh). With a dedicated focus on Civil &amp; Criminal Matters,
+          Based in Lucknow, I am a practicing Advocate at the District & Sessions Court
+          (Civil Court, Kaiserbagh). With a dedicated focus on Civil & Criminal Matters,
           Property Disputes, and Matrimonial Law, I have committed my practice to helping
           individuals and families secure justice.
         </p>
@@ -79,8 +80,8 @@ const AboutSection = () => (
             transition={{ delay: i * 0.15, duration: 0.5 }}
             className="text-center"
           >
-            <div className="w-14 h-14 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
-              <p.icon className="w-6 h-6 text-gold" strokeWidth={1.5} />
+            <div className="w-14 h-14 border border-border flex items-center justify-center mx-auto mb-4">
+              <p.icon className="w-6 h-6 text-primary" strokeWidth={1.5} />
             </div>
             <h4 className="font-heading text-lg font-semibold text-foreground mb-2">
               {p.title}

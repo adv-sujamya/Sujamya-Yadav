@@ -28,37 +28,24 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-card/95 backdrop-blur-md shadow-md"
+          ? "bg-background/95 backdrop-blur-md border-b border-border"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
         <button onClick={() => handleClick("#home")} className="text-left">
-          <span
-            className={`font-heading text-lg font-semibold tracking-wide transition-colors duration-300 ${
-              scrolled ? "text-navy" : "text-gold"
-            }`}
-          >
-            SUJAMYA YADAV
-          </span>
-          <span
-            className={`block text-xs tracking-[0.2em] uppercase transition-colors duration-300 ${
-              scrolled ? "text-muted-foreground" : "text-gold-light"
-            }`}
-          >
-            Advocate
+          <span className="font-heading text-lg font-bold tracking-[0.15em] text-foreground uppercase">
+            Sujamya Yadav
           </span>
         </button>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex gap-8">
+        <nav className="hidden md:flex gap-10">
           {navLinks.map((l) => (
             <button
               key={l.href}
               onClick={() => handleClick(l.href)}
-              className={`text-sm font-medium tracking-wide transition-colors duration-300 hover:text-gold ${
-                scrolled ? "text-foreground" : "text-cream"
-              }`}
+              className="text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
             >
               {l.label}
             </button>
@@ -72,9 +59,9 @@ const Header = () => {
           aria-label="Toggle menu"
         >
           {mobileOpen ? (
-            <X className={scrolled ? "text-foreground" : "text-cream"} />
+            <X className="text-foreground" />
           ) : (
-            <Menu className={scrolled ? "text-foreground" : "text-cream"} />
+            <Menu className="text-foreground" />
           )}
         </button>
       </div>
@@ -86,14 +73,14 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-card/95 backdrop-blur-md border-t border-border"
+            className="md:hidden bg-background/95 backdrop-blur-md border-t border-border"
           >
             <nav className="flex flex-col px-6 py-4 gap-4">
               {navLinks.map((l) => (
                 <button
                   key={l.href}
                   onClick={() => handleClick(l.href)}
-                  className="text-sm font-medium text-foreground hover:text-gold transition-colors text-left"
+                  className="text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground hover:text-primary transition-colors text-left"
                 >
                   {l.label}
                 </button>

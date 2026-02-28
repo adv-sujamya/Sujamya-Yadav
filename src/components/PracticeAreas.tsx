@@ -54,16 +54,17 @@ const PracticeAreas = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <div className="w-16 h-1 bg-primary mx-auto mb-8" />
+          <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mb-4">
             Areas of Practice
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-sm">
             Comprehensive Legal Support — Providing dedicated legal assistance across a
-            wide range of disciplines at the Lucknow District &amp; Sessions Court.
+            wide range of disciplines at the Lucknow District & Sessions Court.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6">
           {areas.map((area, i) => (
             <motion.div
               key={area.title}
@@ -71,9 +72,9 @@ const PracticeAreas = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="group bg-card rounded-lg p-8 border border-border hover:border-gold transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              className="group bg-card p-8 border border-border hover:border-primary transition-all duration-300"
             >
-              <area.icon className="w-10 h-10 text-gold mb-4" strokeWidth={1.5} />
+              <area.icon className="w-10 h-10 text-primary mb-4" strokeWidth={1.5} />
               <h3 className="font-heading text-xl font-semibold text-foreground mb-2">
                 {area.title}
               </h3>
@@ -81,7 +82,7 @@ const PracticeAreas = () => {
               <ul className="space-y-2">
                 {area.items.map((item) => (
                   <li key={item} className="text-muted-foreground text-sm leading-relaxed flex gap-2">
-                    <span className="text-gold mt-1.5 flex-shrink-0">•</span>
+                    <span className="text-primary mt-1.5 flex-shrink-0">▸</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -95,13 +96,13 @@ const PracticeAreas = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-12 bg-navy rounded-lg p-8 text-center"
+          className="mt-12 border border-primary p-8 text-center"
         >
-          <p className="text-cream/80 text-sm md:text-base">
+          <p className="text-muted-foreground text-sm md:text-base">
             Not sure which category your case falls under?{" "}
             <button
               onClick={() => scrollTo("#contact")}
-              className="text-gold underline underline-offset-4 hover:text-gold-light transition-colors font-medium"
+              className="text-primary font-semibold hover:underline underline-offset-4 transition-colors"
             >
               Schedule a brief consultation
             </button>{" "}
